@@ -1,7 +1,7 @@
 import styles from './button.module.scss'
 const Button = (element) => {
     return (
-        <button className={styles.button}>{element.text}</button>
+        <button className={styles.button}>{element.children}</button>
     )
 }
 
