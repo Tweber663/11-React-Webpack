@@ -1,10 +1,11 @@
 import styles from './List.module.scss'
 import Column from '../column/column'
+import ColumnForm from '../ColumnForm/ColumnForm';
+
 
 //React hooks
-import { useState } from 'react';
-import { useEffect } from 'react';
 import shortid from 'shortid';
+import { useState } from 'react';
 
 const List = () => {
   
@@ -15,13 +16,9 @@ const List = () => {
         { id: 3, titles: 'Games', icon: 'gamepad' }
     ]);
 
-    const [value, setValue] = useState('');
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setColumns([...columns, {id: shortid(), titles: value }]);
-        setValue('');
-    }
+    const addColumn = element => {
+		setColumns([...columns, { id: shortid(), titles: element.title }]);
+    };
 
     return (
         <div className={styles.list}>
@@ -34,10 +31,7 @@ const List = () => {
             <section className={styles.columns}>
                 {columns.map((c) => <Column key={c.id} title={c.titles} icon={c.icon}/>)}
                 
-                <form onSubmit={handleSubmit}>
-                    <input type="text" value={value} onChange={e => setValue(e.target.value)}/>
-                    <button>Add column</button>
-                </form>
+                <ColumnForm action={addColumn} />
 
             </section>
         </div>
