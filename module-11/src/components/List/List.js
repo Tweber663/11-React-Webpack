@@ -4,6 +4,7 @@ import Column from '../column/column'
 //React hooks
 import { useState } from 'react';
 import { useEffect } from 'react';
+import shortid from 'shortid';
 
 const List = () => {
   
@@ -16,12 +17,11 @@ const List = () => {
 
     const [value, setValue] = useState('');
 
-
     const handleSubmit = (e) => {
         e.preventDefault();
-        setColumns([...columns, { id: ??, title: ?? }]);
+        setColumns([...columns, {id: shortid(), titles: value }]);
+        setValue('');
     }
-
 
     return (
         <div className={styles.list}>
@@ -35,7 +35,7 @@ const List = () => {
                 {columns.map((c) => <Column key={c.id} title={c.titles} icon={c.icon}/>)}
                 
                 <form onSubmit={handleSubmit}>
-                    <input type="text" />
+                    <input type="text" value={value} onChange={e => setValue(e.target.value)}/>
                     <button>Add column</button>
                 </form>
 
