@@ -17,7 +17,8 @@ const List = () => {
     ]);
 
     const addColumn = element => {
-		setColumns([...columns, { id: shortid(), titles: element.title }]);
+		setColumns([...columns, { id: shortid(), titles: element.title, icon: element.icon }]);
+        console.log(columns);
     };
 
     return (
