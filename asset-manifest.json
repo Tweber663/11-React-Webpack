@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Tweber663/github.io/11-React-Webpack/static/css/main.ca5a8ba3.css",
-    "main.js": "/Tweber663/github.io/11-React-Webpack/static/js/main.2afc71b6.js",
-    "static/media/fontawesome-webfont.svg?v=4.7.0": "/Tweber663/github.io/11-React-Webpack/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
-    "static/media/fontawesome-webfont.eot": "/Tweber663/github.io/11-React-Webpack/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
-    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/Tweber663/github.io/11-React-Webpack/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
-    "static/media/fontawesome-webfont.woff?v=4.7.0": "/Tweber663/github.io/11-React-Webpack/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
-    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/Tweber663/github.io/11-React-Webpack/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
-    "index.html": "/Tweber663/github.io/11-React-Webpack/index.html",
-    "main.ca5a8ba3.css.map": "/Tweber663/github.io/11-React-Webpack/static/css/main.ca5a8ba3.css.map",
-    "main.2afc71b6.js.map": "/Tweber663/github.io/11-React-Webpack/static/js/main.2afc71b6.js.map"
+    "main.css": "/11-react-webpack/static/css/main.30fb6d16.css",
+    "main.js": "/11-react-webpack/static/js/main.2afc71b6.js",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/11-react-webpack/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/fontawesome-webfont.eot": "/11-react-webpack/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/11-react-webpack/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/11-react-webpack/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/11-react-webpack/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "index.html": "/11-react-webpack/index.html",
+    "main.30fb6d16.css.map": "/11-react-webpack/static/css/main.30fb6d16.css.map",
+    "main.2afc71b6.js.map": "/11-react-webpack/static/js/main.2afc71b6.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca5a8ba3.css",
+    "static/css/main.30fb6d16.css",
     "static/js/main.2afc71b6.js"
   ]
 }
