@@ -6,14 +6,16 @@ import App from './App';
 import './styles/normalize.scss';
 import './styles/global.scss';
 import 'font-awesome/css/font-awesome.min.css';
-import reportWebVitals from './reportWebVitals';
+import Navbar from './components/Navbar/Navbar';
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-    </React.StrictMode>
+    <React.StrictMode>
+      <BrowserRouter>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </BrowserRouter>
+  </React.StrictMode>
 );
-reportWebVitals();

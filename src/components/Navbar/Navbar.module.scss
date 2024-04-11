@@ -1,0 +1,45 @@
+//Navbar
+.flexNav {
+    display: flex;
+    flex-direction: row;
+    background-color: #272b37;
+    height: 57px;
+}
+
+.flexNavElement1 {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 7%;
+}
+
+.flexNavElement1 a {
+   text-decoration: none; 
+   font-size: 40px;
+   color: white;
+   margin: 0;
+}
+
+.flexNavElement2 {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 7%;
+}
+
+ul li {
+   display: inline-block;
+   padding-left: 15px;
+}
+
+ul a {
+   text-decoration: none;
+   color: white;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
