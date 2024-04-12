@@ -1,5 +1,7 @@
 
 import styles from './Navbar.module.scss'
+import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     console.log(styles.check);
@@ -10,11 +12,15 @@ const Navbar = () => {
                 <a href="http://localhost:3000/"><span className="fa fa-tasks"></span></a>
             </div>
             <div className={styles.flexNavElement2}>
-               <ul>
-                    <a href="/"><li>Home</li></a>
-                    <a href="/favorite"><li>Favorite</li></a>
-                    <a href="/about"><li>About</li></a>
-               </ul>
+                <ul>
+                    <li><NavLink className={({isActive}) => isActive? styles.linkActive : undefined} to="/">Home</NavLink></li>
+                    <li><NavLink to="favorite" className={({isActive}) => isActive? styles.linkActive: undefined}>Favorite</NavLink></li>
+
+                    <li><NavLink to="/about" className={({isActive}) => isActive? styles.linkActive: undefined}>About</NavLink></li>
+
+
+                    
+                </ul>
             </div>
         </nav>
     )

@@ -1,5 +1,6 @@
 import { createStore } from 'redux';
 import initialState from './initialState';
+import List from '../components/List/List';
 //selectors
 
 const reducer = (state, action) => {
@@ -25,6 +26,10 @@ const store = createStore(
   initialState,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
+
+export const getListById = ({lists}, id) => lists.find((e) => e.id === id)
+
+export const getColumnsByList = ({columns}, id) => columns.filter((e) => e.listId === id);
 
 export const getFilteredCards = ({cards, searchString}, columnId) => 
 cards.filter(card => card.columnId === columnId && card.title.toLowerCase().includes(searchString.toLowerCase()));
