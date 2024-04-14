@@ -3,14 +3,20 @@ import TextInput from '../TextInput/TextInput';
 import Button from '../button/button';
 import { useDispatch } from 'react-redux';
 import { searchForm } from '../../redux/store';
+import { useEffect } from 'react';
 
 const SearchForm = () => {
 
     const disptach = useDispatch();
 
+    useEffect(() => {
+        disptach(searchForm({payload: ''}))
+    }, [])
+
+
     const searchFormHandler = (e) => {
         e.preventDefault()
-        disptach(searchForm({payload: e.target[0].value}))
+        disptach(searchForm({payload: e.target[0].value}));
     } 
 
     return (

@@ -6,6 +6,7 @@ import { getFilteredCards } from '../../redux/store';
 
 const Column = (element) => {
     const cards = useSelector(state => getFilteredCards(state, element.id));
+    console.log(cards)
     return (
         <article className={styles.column}>
             <h2 className={styles.title}>
