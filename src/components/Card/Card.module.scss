@@ -10,4 +10,20 @@
     display: flex;
     justify-content: space-between;
     font-weight: bold;
+    color: black;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: none;
+    border: none;
+}
+
+.star {
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: none;
+    border: none;
+    color: gold;
 }

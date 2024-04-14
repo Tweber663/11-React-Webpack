@@ -8,6 +8,8 @@ import Favorite from './components/Favorite/Favorite'
 import Navbar from './components/Navbar/Navbar';
 import { Routes, Route } from 'react-router-dom';
 import NoMatch from './components/NoMatch/NoMatch';
+import FavoriteEmpty from './components/favoriteEmpty.js/favoriteEmpty';
+
 
 const App = () => {
   return (
@@ -20,6 +22,7 @@ const App = () => {
           <Route path="/favorite" element={<Favorite />} />
           <Route path="/list/:listId" element={<List />} />
           <Route path="*" element={<NoMatch/>}/>
+          <Route path="/favoriteEmpty" element={<FavoriteEmpty />}/>
         </Routes>
       </Container>
     </div>
