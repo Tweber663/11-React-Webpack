@@ -5,30 +5,76 @@ import { act } from '@testing-library/react';
 //selectors
 
 const reducer = (state, action) => {
+  const newState = {
+    lists: listsReducer(state.lists, action),
+    columns: columnsReducer(state.columns, action),
+    cards: cardsReducer(state.cards, action),
+    searchString: searchStringReducer(state.searchString, action)
+  };
 
-switch (action.type) {
-  case "ADD_COLUMN":
-    return { ...state, columns: [...state.columns, action.payload]};
+  return newState;
+};
 
-  case "ADD_CARD":
-    return  { ...state, cards: [...state.cards, action.payload]}; 
+  const columnsReducer = (statePart = [], action) => {
+    switch(action.type) {
+      case 'ADD_COLUMN':
+        return [...statePart, { ...action.payload, id: shortid() }];
+      default:
+        return statePart;
+    }}
 
-  case "UPDATE_SEARCHSTRING":
-      return {...state, searchString: `${action.payload.payload}`};
-
-  case "ADD_LIST":
-  return {...state, lists: [...state.lists, action.payload]}
+  //   case "ADD_COLUMN":
+  //     return { ...state, columns: [...state.columns, action.payload]};
 
 
+  const cardsReducer = (statePart = [], action) => {
+    switch(action.type) {
+      case 'ADD_CARD':
+        return [...statePart, { ...action.payload, id: shortid() }];
+      case 'TOGGLE_CARD_FAVORITE':
+        return statePart.map(card => (card.id === action.payload) ? { ...card, isFavorite: !card.isFavorite } : card);
+      default:
+        return statePart;
+    }}
+
+    const searchStringReducer = (statePart = '', action) => {
+      switch(action.type) {
+        case 'UPDATE_SEARCHSTRING':
+          return action.payload
+        default:
+          return statePart;
+      }}
+
+    const listsReducer = (statePart = [], action) => {
+      switch(action.type) {
+        case 'ADD_LIST':
+          return [...statePart, { ...action.payload, id: shortid() }];
+        default:
+          return statePart;
+      }}
 
 
-  case "TOGGLE_CARD_FAVORITE":
-    return { ...state, cards: state.cards.map(card => (card.id === action.payload.cardId) ? { ...card, isFavorite: !card.isFavorite } : card) };
+// switch (action.type) {
 
-    default:
-      return state;
+//   case "ADD_COLUMN":
+//     return { ...state, columns: [...state.columns, action.payload]};
+
+//   case "ADD_CARD":
+//     return  { ...state, cards: [...state.cards, action.payload]}; 
+
+//   case "UPDATE_SEARCHSTRING":
+//       return {...state, searchString: `${action.payload.payload}`};
+
+//   case "ADD_LIST":
+//   return {...state, lists: [...state.lists, action.payload]}
+
+//   case "TOGGLE_CARD_FAVORITE":
+//     return { ...state, cards: state.cards.map(card => (card.id === action.payload.cardId) ? { ...card, isFavorite: !card.isFavorite } : card) };
+
+//     default:
+//       return state;
   
-}
+// }
 };
 
 const store = createStore(
