@@ -1,7 +1,7 @@
 
 import styles from './Favorite.module.scss'
 import { useSelector } from 'react-redux';
-import {favCardFilter} from '../../redux/store'
+import { favCardFilter } from '../../redux/cardsRedux';
 import Card from '../Card/Card';
 import { Navigate } from 'react-router-dom';
 
